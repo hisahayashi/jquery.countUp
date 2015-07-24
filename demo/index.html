@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>demo</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/default.min.css" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Leckerli+One|Open+Sans:400,600" rel="stylesheet" type="text/css">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>jquery.countUp</h1>
+
+<div class="count">
+<div>text1: <span class="text1">0</span></div>
+<div>text2: <span class="text2">1000</span></div>
+<div>text3: <span class="text3">0</span></div>
+</div>
+
+<div class="code">
+<pre>
+<code class="js"></code>
+</pre>
+</div>
+
+<footer>
+<ul>
+<li>Github: <a href="https://github.com/hisahayashi/jquery.countUp" target="_blank">https://github.com/hisahayashi/jquery.countUp</a>
+</ul>
+<p>&copy; hisa hayashi.</p>
+</footer>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript" ></script>
+<script src="../jquery.countUp.js" type="text/javascript"></script>
+<script type="text/javascript" class="count_script">
+var param1 = {
+  last: 1000
+};
+$('.text1').countUp(param1);
+
+var param2 = {
+  start: 1000,
+  last: 1,
+  duration: 1000,
+  frame: 1000 / 30,
+  update: function( value ){
+  },
+  complete: function( value ){
+  }
+};
+$('.text2').countUp(param2);
+
+var param3 = {
+  last: 1000000,
+  duration: 3500,
+  frame: 1000 / 30,
+  update: function( value ){
+  },
+  complete: function( value ){
+  }
+};
+$('.text3').countUp(param3);
+</script>
+<script type="text/javascript">
+var code = $('.code > pre > code');
+hljs.initHighlightingOnLoad();
+code.each(function(i, block) {
+  hljs.highlightBlock(block);
+});
+code.text( $('.count_script').text() );
+</script>
+</body>
+</html>
