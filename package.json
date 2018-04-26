@@ -1,0 +1,27 @@
+{
+  "name": "jquery-countup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/jquery.countUp.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hisahayashi/jquery.countUp.git"
+  },
+  "keywords": [
+    "jquery",
+    "count",
+    "countup"
+  ],
+  "author": "hisa hayashi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hisahayashi/jquery.countUp/issues"
+  },
+  "homepage": "https://github.com/hisahayashi/jquery.countUp#readme"
+}
